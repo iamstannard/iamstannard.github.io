@@ -18,7 +18,7 @@ body * {
     clear: both;
     line-height: 0;
     height: 0;
-    visibility: hidden;
+    visibility: visible;
 }
 
 .clear {
@@ -27,12 +27,10 @@ body * {
 
 .fl {
     float: left;
-    /*padding: 0 10px 10px 0;*/
 }
 
 .fr {
     float: right;
-    /*padding: 0 0 10px 10px;*/
 }
 
 
@@ -41,17 +39,49 @@ body * {
 /*******************************************/
 
 body {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Lusitana', serif;
     text-align: center;
-    color: #000;
+    color: #666;
+    background-color: #eee;
 }
 
-div {}
+h1 {
+    font-family: 'Lobster', cursive;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+.testimonial p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.25em;
+}
+
+blockquote {
+    font-style: italic;
+}
+
+blockquote:before {
+    content: '\201C';
+    font-size: 2em;
+    vertical-align: text-top;
+}
+
+blockquote:after {
+    content: '\201D';
+    font-size: 2em;
+    vertical-align: text-top;
+}
 
 .container {
     width: 1200px;
     margin: 0 auto;
-    padding: 50px 25px;
+    padding-top: 1.5625em;
+    padding-bottom: 4.0625em;
+    /*background-color: aqua;*/
 }
 
 .col-1-2 {
@@ -66,10 +96,62 @@ div {}
     width: 25%;
 }
 
-img {}
-
 a {
     text-decoration: none;
+}
+
+a,
+a:active,
+a:focus {
+    outline: none;
+}
+
+
+/*http://www.gridlover.net/app/*/
+
+body {
+    font-size: 1em;
+    line-height: 1.375em;
+    /*max-width: 1200px;*/
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 5.8125em;
+    line-height: 1.1827957em;
+    margin-top: 0.47311828em;
+    margin-bottom: 0.23655914em;
+}
+
+h2 {
+    font-size: 3.25em;
+    line-height: 1.269230769em;
+    margin-top: 0.84615385em;
+    margin-bottom: 0.42307692em;
+}
+
+h3 {
+    font-size: 1.8125em;
+    line-height: 1.51724138em;
+    margin-top: 0.75862069em;
+    margin-bottom: 0.75862069em;
+}
+
+h4 {
+    font-size: 1em;
+    line-height: 1.375em;
+    margin-top: 1.375em;
+    margin-bottom: 1.375em;
+}
+
+p,
+ul,
+ol,
+pre,
+table,
+blockquote {
+    margin-top: 1.375em;
+    margin-bottom: 1.375em;
 }
 
 
@@ -81,62 +163,100 @@ a {
 /* HEADER */
 
 header {
-    height: 400px;
+    height: 475px;
     overflow: hidden;
+}
+
+header h1 {
+    color: rebeccapurple;
+}
+
+#download-btn {
+    margin-top: 3em;
+}
+
+#download-btn a {
+    color: white;
+    background-color: rebeccapurple;
+    padding: 1em;
+    border-radius: 0.5em;
+}
+
+#download-btn a:hover {
+    color: mediumpurple;
 }
 
 
 /* TESTIMONIALS */
 
 .testimonial {
-    background: mintcream;
+    background: mediumpurple;
+    color: white;
 }
 
 .testimonial .container {
-    background: mintcream;
     padding: 25px 25px;
+}
+
+.testimonial .container blockquote {
+    width: 50%;
+    margin: auto;
 }
 
 
 /* FEATURES */
 
+#features {}
+
 .feature img {
     border-radius: 50%;
+}
+
+.feature-image>img {
+    margin-top: 8em;
 }
 
 
 /* DOWNLOAD */
 
+#download img {
+    margin: 0px 10px;
+}
+
 
 /* SCREENSHOTS */
 
-#screenshots .row {
-    position: relative;
+.screenshot-carousel {
+    width: 80%;
+    margin: auto;
 }
 
-.screenshot-container div {
-    display: inline-block;
+.screenshot-carousel div img {
+    margin: auto;
 }
 
-#arrowL,
-#arrowR {
-    position: absolute;
-    top: 100px;
+.slick-prev:before,
+.slick-next:before {
+    color: rebeccapurple;
 }
 
-#arrowL {
-    left: 0px;
+.slick-slide:focus {
+    outline: none;
 }
 
-#arrowR {
-    right: 0px;
+.slick-dots li button:before,
+.slick-dots li.slick-active button:before {
+    color: rebeccapurple;
 }
 
 
 /* SOCIAL */
 
+#social {}
+
 #social img {
     border-radius: 50%;
+    margin: 0px 10px;
 }
 
 
@@ -150,28 +270,48 @@ footer .container {
 /* SIDE MENU */
 
 #show-menu-btn,
-#side-menu-wrapper {
+#hide-menu-btn,
+#to-top-btn {
+    cursor: pointer;
+    margin: 0px;
+}
+
+#show-menu-btn {
     position: fixed;
     top: 0px;
     right: 0px;
-    padding: 25px;
+    margin: 25px;
 }
+
 
 #side-menu-wrapper {
-    height: 100%;
-    text-align: left;
-    background: lightyellow;
-}
-
-#side-menu a {
-    display: block;
-    width: 100%;
-    background: lavender;
-}
-
-#to-top-btn {
     position: fixed;
-    bottom: 0px;
-    right: 0px;
+    top: 0px;
+    left: 100%;
+    height: 100%;
     padding: 25px;
+    text-align: left;
+    background-color: mediumpurple;
+}
+
+#side-menu-wrapper a {
+    display: block;
+    color: white;
+    width: 100%;
+    margin-top: 1em;
+    margin-bottom 1em:
+}
+
+#side-menu-wrapper a:hover {
+    color: rebeccapurple;
+}
+
+/******************************************
+/* RESPONSIVE
+/*******************************************/
+
+@media only screen and (max-device-width: 768px) {
+    .container {
+        width: 600px;
+    }
 }
