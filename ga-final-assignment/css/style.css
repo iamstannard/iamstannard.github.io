@@ -183,7 +183,7 @@ header h1 {
 }
 
 #download-btn a:hover {
-    color: mediumpurple;
+    background-color: mediumpurple;
 }
 
 
@@ -194,9 +194,11 @@ header h1 {
     color: white;
 }
 
+
 .testimonial .container {
-    padding: 25px 25px;
+    padding: 1.5625em 0em 0.5em 0em;
 }
+
 
 .testimonial .container blockquote {
     width: 50%;
@@ -290,7 +292,7 @@ footer .container {
 
 #side-menu-wrapper {
     text-align: left;
-    background-color: mediumpurple;
+    background-color: rebeccapurple;
 }
 
 #side-menu-wrapper a {
@@ -301,7 +303,7 @@ footer .container {
 }
 
 #side-menu-wrapper a:hover {
-    background-color: rebeccapurple;
+    background-color: mediumpurple;
 }
 
 /******************************************
