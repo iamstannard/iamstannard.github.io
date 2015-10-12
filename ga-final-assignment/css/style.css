@@ -336,6 +336,7 @@ footer .container {
         margin-bottom: 0px;
     }
     #social img {
+        width: 20%;
         margin: 0px 5px;
     }
     .testimonial .container blockquote {
