@@ -342,4 +342,17 @@ footer .container {
     .testimonial .container blockquote {
         width: 80%;
     }
+    #show-menu-btn {
+        margin: 10px;
+    }
+    #hide-menu-btn {
+        margin: 10px 0px 10px 10px;
+    }
+    #side-menu-wrapper {
+        text-align: left;
+        background-color: rebeccapurple;
+    }
+    #side-menu-wrapper a {
+        padding: 10px 10px;
+    }
 }
