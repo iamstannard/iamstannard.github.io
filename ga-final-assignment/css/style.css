@@ -310,16 +310,18 @@ footer .container {
 
 @media screen and (max-width:800px) {
     .container {
-        width: 600px;
+        width: 100%;
     }
     [class*='col-'] {
-        width: 80%;
+        width: 90%;
         float: none;
         display: block;
         margin: auto;
     }
-    header img {
+    header {
         height: auto;
+    }
+    header img {
         display: none;
     }
     .feature-image {
@@ -335,5 +337,8 @@ footer .container {
     }
     #social img {
         margin: 0px 5px;
+    }
+    .testimonial .container blockquote {
+        width: 80%;
     }
 }
