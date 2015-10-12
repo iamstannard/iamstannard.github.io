@@ -5,40 +5,10 @@
 
     $(document).ready(function () {
         
-        
-
         // side menu
+        // http://takien.github.io/jPushMenu/
         
         $('.toggle-menu').jPushMenu();
-
-//        var sideBarAnimTime = 500;
-//
-//        function setSideBarLeft() {
-//            var windowWidth = $(window).width(),
-//                sideBarWidth = $('#side-menu-wrapper').css('width'),
-//                sideBarWidthVal = sideBarWidth.match(/\d/g),
-//                sideBarLeftVal;
-//            sideBarWidthVal = sideBarWidthVal.join("");
-//            sideBarLeftVal = windowWidth - sideBarWidthVal;
-//            return sideBarLeftVal;
-//        }
-//
-//        // on show menu button click slide menu in
-//
-//        $('#show-menu-btn').click(function () {
-//            $('#side-menu-wrapper').animate({
-//                left: setSideBarLeft() + 'px'
-//            }, sideBarAnimTime);
-//
-//        });
-//
-//        // on close menu button click slide menu out
-//
-//        $('#hide-menu-btn').click(function () {
-//            $('#side-menu-wrapper').animate({
-//                left: $(window).width() + 'px'
-//            }, sideBarAnimTime);
-//        });
 
         // ----- smooth scroll to element -----
 
@@ -72,7 +42,7 @@
                         slidesToScroll: 1,
                         infinite: true,
                         dots: true,
-                        arrows: false
+                        arrows: true
                     }
                 }
             ]
