@@ -308,7 +308,7 @@ footer .container {
 /* RESPONSIVE
 /*******************************************/
 
-@media only screen and (max-device-width: 800px) {
+@media screen and (max-width:800px) {
     .container {
         width: 600px;
     }
