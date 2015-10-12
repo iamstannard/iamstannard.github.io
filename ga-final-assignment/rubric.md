@@ -11,6 +11,7 @@ For the final project, you'll be designing and building a website of your choice
 Student: Aaron Stannard
 
 Project URL: http://iamstannard.github.io/ga-final-assignment/
+GitHub Repo: https://github.com/iamstannard/iamstannard.github.io
 
 |                                                                                                         |                                |                        |                          |
 |---------------------------------------------------------------------------------------------------------|--------------------------------|------------------------|--------------------------|
