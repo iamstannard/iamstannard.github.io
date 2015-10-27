@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title></title>
+
+    <meta charset="UTF-8">
+
+    <style type="text/css">
+        #bannerContainer {
+            display: none
+        }
+    </style>
+
+    <!-- TweenMax -->
+    <!-- <script src='libs/TweenMax.min.js'></script> -->
+    <!-- now being loaded by main js -->
+
+    <!-- PreloadJS -->
+    <!-- <script src='libs/preloadjs-0.4.1.min.js'></script> -->
+
+    <!-- DoubleClick Enabler -->
+    <script src='https://s0.2mdn.net/ads/studio/Enabler.js'></script>
+
+    <script>
+        // Check Enabler is ready
+
+        function checkEnablerInit() {
+            console.log('checkEnablerInit');
+            if (Enabler.isInitialized()) {
+                enablerInit();
+            } else {
+                Enabler.addEventListener(studio.events.StudioEvent.INIT, enablerInit);
+            }
+        }
+
+        // Run when Enabler is ready
+
+        function enablerInit() {
+            console.log('enablerInit');
+            if (Enabler.isPageLoaded()) {
+                enablerPoliteInit();
+            } else {
+                Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, enablerPoliteInit);
+            }
+        }
+
+        function enablerPoliteInit() {
+            console.log('enablerPoliteInit');
+
+            // Load in CSS 
+
+            var extCSS = document.createElement('link');
+            extCSS.setAttribute('rel', 'stylesheet');
+            extCSS.setAttribute('type', 'text/css');
+            extCSS.setAttribute('href', Enabler.getUrl('styles.css'));
+            document.getElementsByTagName('head')[0].appendChild(extCSS);
+
+            // Load in JS
+
+            var extJavascript = document.createElement('script');
+            extJavascript.setAttribute('type', 'text/javascript');
+            extJavascript.setAttribute('src', Enabler.getUrl('script.js'));
+            document.getElementsByTagName('head')[0].appendChild(extJavascript);
+
+        }
+    </script>
+
+</head>
+
+<body onload='checkEnablerInit()'>
+    <div id='bannerContainer'>
+        
+        <!-- Animal images container -->
+        <div id='animal-container'>
+             <img src="images/gondola.jpg" id="gondola" />
+             <img src="images/seal.jpg" id="seal" />
+             <img src="images/elephant.jpg" id="elephant" />
+        </div>
+
+        <!-- Leaf container -->
+        <div id='leaf-container'>
+            <img src="images/leaf-bush.png" class="bush-back hidden" id="bush1"/>
+            <img src="images/leaf-bush.png" class="bush-back hidden" id="bush2"/>
+            <img src="images/leaf-bush.png" class="bush-back hidden" id="bush3"/>
+            <img src="images/leaf-bush.png" class="bush-back hidden" id="bush4"/>
+            <img src="images/leaf-bush.png" class="bush-front hidden" id="bush5"/>
+            <img src="images/leaf-bush.png" class="bush-front hidden" id="bush6"/>
+            <img src="images/leaf-bush.png" class="bush-front hidden" id="bush7"/>
+            <img src="images/leaf-bush.png" class="bush-front hidden" id="bush8"/>            
+        </div>       
+
+
+
+        <!-- Frames -->
+        <div id='frame1' class="frame">
+            <img src="images/frame1a-txt.png" id="copy1" />
+            <img src="images/frame1b-txt.png" id="copy2" />
+            <img src="images/frame1c-txt.png" id="interaction-cta1" />
+            <img src="images/leaf-glow.png" id="frame1-leaf" />
+        </div>
+
+        <div id='frame2' class="frame">
+            <img src="images/frame3a-txt.png" id="interaction-cta2" />
+            <img src="images/leaf-glow.png" id="frame2-leaf" />
+        </div>
+
+        <div id='frame3' class="frame">
+            <img src="images/frame5a-txt.png" id="interaction-cta3" />      
+            <img src="images/leaf-glow.png" id="frame3-leaf" />      
+        </div>
+
+        <div id='frame4' class="frame">
+            <img src="images/frame7a-txt.png" id="copy3" />
+            <img src="images/frame7b-txt.png" id="copy4" />
+        </div>
+        
+        
+
+        <!-- End frame container -->
+        <div id='end-frame' class="frame">
+            <img src="images/taronga-logo.png" id="logo" />
+            <img src="images/taronga-lockup.png" id="lockup" />
+            <img src="images/btn-buy-tickets.png" id="ctaButton" />
+        </div>
+        
+
+        <!-- Exit -->
+        <div id='bgexit'></div>
+    </div>
+    </div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+

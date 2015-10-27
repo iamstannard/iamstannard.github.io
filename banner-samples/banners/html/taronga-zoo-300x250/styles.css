@@ -1,0 +1,233 @@
+body {
+    margin: 50px;
+    padding: 0px;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    -webkit-text-size-adjust: none;
+    background-color: #fff;
+}
+
+img,
+div {
+    position: absolute;
+}
+#bannerContainer {
+    width: 300px;
+    height: 250px;
+    overflow: hidden;
+    display: none;
+    background-color: #111; 
+    transition: 0.3s background-color;
+}
+.greenBg {
+    background-color: #175642 !important;
+}
+#bgexit {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    top: 0px;
+    left: 0px;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    border-style: solid;
+    border-width: 1px;
+    border-color: #658a3c;
+}
+.frame {
+    position: absolute;
+    top: 0;
+    left: 0;     
+}
+
+/* -------------------------------------- Animals -------------------------------------- */
+
+#animal-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#animal-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+
+/* -------------------------------------- Frames -------------------------------------- */
+
+.frame {
+    position: relative;
+}
+.frame img { left: 50%; }
+
+
+#frame1 { display: none; }
+#frame2 { display: none; }
+#frame3 { display: none; }
+#frame4 { display: none; }
+#end-frame { display: none; }
+
+/* Frame 1 elements */
+#copy1 { margin-left: -107px; top: 50px; }
+#copy2 { margin-left: -107px; top: 100px; }
+#interaction-cta1 { margin-left: -110px; top: 205px; }
+#frame1-leaf {
+    position: absolute;
+    top: 150px;
+    left: 215px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+/* Frame 2 elements */
+#interaction-cta2 { margin-left: -125px; top: 40px; }
+#frame2-leaf {
+    position: absolute;
+    top: -20px;
+    left: 215px;
+    z-index: 10;
+    cursor: pointer;
+    -ms-transform: rotate(110deg); /* IE 9 */
+    -webkit-transform: rotate(110deg); /* Chrome, Safari, Opera */
+    transform: rotate(110deg);
+}
+
+/* Frame 3 elements */
+#interaction-cta3 { margin-left: -45px; top: 115px }
+#frame3-leaf {
+    position: absolute;
+    top: 65px;
+    left: 30px;
+    z-index: 10;
+    cursor: pointer;
+    -ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+}
+
+
+/* Frame 4 elements */
+#copy3 { margin-left: -111px; top: 50px; }
+#copy4 { margin-left: -72px; top: 130px; }
+
+
+/* End Frame elements */
+#logo { margin-left: -114px; top: 20px; }
+#lockup { margin-left: -98px; top: 110px; }
+#ctaButton { margin-left: -66px; top: 180px; }
+
+
+/* -------------------------------------- BUSHES -------------------------------------- */
+
+#leaf-container { position: absolute; }
+
+.bush-front { position: absolute; transition: 0.8s all; }
+
+.bush-back { position: absolute; transition: 1s all; }
+
+
+#bush1.visible {    top: -50px;
+}
+#bush1.hidden {     top: -160px;
+}
+#bush1.retracted {    top: -260px;
+}
+#bush1.removed {     top: -260px;
+}
+
+#bush2.visible {    top: 50px;      left: -100px; 
+                    -ms-transform: rotate(-90deg);  -webkit-transform: rotate(-90deg);  transform: rotate(-90deg);
+}
+#bush2.hidden {     top: 70px;      left: -175px;
+                    -ms-transform: rotate(-110deg);     -webkit-transform: rotate(-110deg); transform: rotate(-110deg);
+}
+#bush2.retracted {    top: 70px;      left: -275px;
+                    -ms-transform: rotate(-110deg);     -webkit-transform: rotate(-110deg); transform: rotate(-110deg);
+}
+#bush2.removed {     top: 70px;      left: -275px;
+                    -ms-transform: rotate(-110deg);     -webkit-transform: rotate(-110deg); transform: rotate(-110deg);
+}
+
+#bush3.visible {    top: 100px;         left: 70px; 
+                    -ms-transform: rotate(180deg);  -webkit-transform: rotate(180deg);  transform: rotate(180deg);
+}
+#bush3.hidden {     top: 180px;         left: 50px; 
+                    -ms-transform: rotate(150deg);  -webkit-transform: rotate(150deg);  transform: rotate(150deg);
+}
+
+#bush3.retracted {   top: 250px;         left: 50px; 
+                    -ms-transform: rotate(150deg);  -webkit-transform: rotate(150deg);  transform: rotate(150deg);
+}
+
+#bush3.removed {     top: 250px;         left: 50px; 
+                    -ms-transform: rotate(150deg);  -webkit-transform: rotate(150deg);  transform: rotate(150deg);
+}
+
+#bush4.visible {    top: -25px;         left: 106px; 
+                    -ms-transform: rotate(80deg);   -webkit-transform: rotate(80deg);   transform: rotate(80deg);
+}
+#bush4.hidden {     top: -50px;         left: 210px; 
+                    -ms-transform: rotate(90deg);   -webkit-transform: rotate(90deg);   transform: rotate(90deg);
+}
+#bush4.retracted {     top: -50px;         left: 260px; 
+                    -ms-transform: rotate(90deg);   -webkit-transform: rotate(90deg);   transform: rotate(90deg);
+}
+#bush4.removed {     top: -50px;         left: 260px; 
+                    -ms-transform: rotate(90deg);   -webkit-transform: rotate(90deg);   transform: rotate(90deg);
+}
+
+#bush5.visible {    top: -50px;     left: -60px;
+                    -ms-transform: rotate(45deg);   -webkit-transform: rotate(45deg);   transform: rotate(-70deg);
+}
+#bush5.hidden {     top: -90px;     left: -150px;
+                    -ms-transform: rotate(-50deg);  -webkit-transform: rotate(-50deg);  transform: rotate(-50deg);
+}
+#bush5.retracted {   top: -120px;     left: -220px;
+                    -ms-transform: rotate(-50deg);  -webkit-transform: rotate(-50deg);  transform: rotate(-50deg);
+}
+#bush5.removed {     top: -120px;     left: -220px;
+                    -ms-transform: rotate(-50deg);  -webkit-transform: rotate(-50deg);  transform: rotate(-50deg);
+}
+
+#bush6.visible {    top: 100px;     left: -60px;
+                    -ms-transform: rotate(-140deg); -webkit-transform: rotate(-140deg); transform: rotate(-140deg);
+}
+#bush6.hidden {     top: 140px;     left: -180px;
+                    -ms-transform: rotate(-140deg); -webkit-transform: rotate(-140deg); transform: rotate(-140deg);
+}
+#bush6.retracted {     top: 140px;     left: -95px;
+                    -ms-transform: rotate(-150deg); -webkit-transform: rotate(-150deg); transform: rotate(-150deg);
+}
+#bush6.removed {     top: 180px;     left: -220px;
+                    -ms-transform: rotate(-150deg); -webkit-transform: rotate(-150deg); transform: rotate(-150deg);
+}
+
+#bush7.visible {    top: 100px;     left: 106px;
+                    -ms-transform: rotate(140deg);  -webkit-transform: rotate(140deg);  transform: rotate(140deg);
+}
+#bush7.hidden {     top: 190px;     left: 140px;
+                    -ms-transform: rotate(150deg);  -webkit-transform: rotate(150deg);  transform: rotate(150deg);
+}
+#bush7.retracted {     top: 200px;     left: 220px;
+                    -ms-transform: rotate(150deg);  -webkit-transform: rotate(150deg);  transform: rotate(150deg);
+}
+#bush7.removed {     top: 200px;     left: 220px;
+                    -ms-transform: rotate(150deg);  -webkit-transform: rotate(150deg);  transform: rotate(150deg);
+}
+
+#bush8.visible {    top: -50px;     left: 106px;
+                    -ms-transform: rotate(40deg);   -webkit-transform: rotate(40deg);   transform: rotate(40deg);
+}
+#bush8.hidden {     top: -90px;     left: 140px;
+                    -ms-transform: rotate(40deg);   -webkit-transform: rotate(40deg);   transform: rotate(40deg);
+}
+#bush8.retracted {     top: -70px;     left: 130px;
+                    -ms-transform: rotate(30deg);   -webkit-transform: rotate(30deg);   transform: rotate(30deg);
+}
+#bush8.removed {     top: -120px;     left: 250px;
+                    -ms-transform: rotate(30deg);   -webkit-transform: rotate(30deg);   transform: rotate(30deg);
+}

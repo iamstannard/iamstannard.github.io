@@ -1,0 +1,237 @@
+body {
+    box-sizing: border-box;
+    margin: 50px;
+    padding: 0px;
+    -webkit-text-size-adjust: none;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #fff;
+    font-family: sans-serif;
+    background-color: #fff;
+}
+
+img,
+div {
+    position: absolute;
+}
+
+img,
+.mapmarker,
+#bookmark-divider {
+    visibility: hidden;
+}
+
+#bannerContainer {
+    background-color: #000;
+    width: 300px;
+    height: 250px;
+    display: block;
+    overflow: hidden;
+    border: 1px solid #A5A5A5;
+}
+
+#black-overlay {
+    width: 100%;
+    height: 100%;
+    background: black;
+    visibility: visible;
+}
+
+#bgexit {
+    background: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*---------- BGS ----------*/
+
+#bgimage1Left {
+    left: 0px;
+}
+
+#bgimage1Right {
+    left: 150px;
+}
+
+.bgimageL {
+    left: -300px;
+    top: 0px;
+}
+
+.bgimageR {
+    left: 300px;
+    top: 0px;
+}
+
+
+/*---------- HEADLINES ----------*/
+
+#headline1 {
+    right: 3px;
+    bottom: 65px;
+}
+
+
+/*---------- BOOKMARK ----------*/
+
+#bookmark-base {
+    left: 93px;
+    top: 188px;
+}
+
+.location,
+#bookmark-divider,
+#pnz-small {
+    left: 148px;
+}
+
+.location {
+    top: 199px;
+}
+
+#bookmark-divider {
+    top: 218px;
+    width: 132px;
+    height: 1px;
+    background: #a5a5a5;
+}
+
+#pnz-small {
+    bottom: 10px;
+}
+
+
+/*---------- MAP ----------*/
+
+#map {
+    left: 107px;
+    top: 196px;
+    width: 30px;
+    height: 46px;
+}
+
+.mapmarker {
+    background: rgb(232, 43, 79);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#mapmarker-main {
+    width: 16px;
+    height: 16px;
+    left: 110px;
+    top: 221px;
+    opacity: 0.8;
+}
+
+#mapmarker1,
+#mapmarker2,
+#mapmarker3 {
+    width: 12px;
+    height: 12px;
+}
+
+
+/*
+#mapmarker1 {
+    top: 125px;
+    left: 125px;
+}
+
+#mapmarker2 {
+    top: 125px;
+    left: 150px;
+}
+
+#mapmarker3 {
+    top: 125px;
+    left: 175px;
+}
+*/
+
+
+/*---------- INTERACTIVE JOURNEY ----------*/
+
+#text-choose {
+    top: 10px;
+    right: 10px;
+}
+
+#arrows {
+    left: 125px;
+    top: 55px;
+}
+
+#hotspot-left,
+#hotspot-right {
+    width: 50%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+#hotspot-left {}
+
+#hotspot-right {
+    left: 50%;
+}
+
+
+/*
+#hotspot-left:hover,
+#hotspot-right:hover {
+    border: 10px solid rgba(232, 43, 79, 0.5);
+}*/
+
+
+/*---------- SELECTED JOURNEY ----------*/
+
+#title-container {
+    left: 10px;
+    top: 10px;
+}
+
+#text-rollover {
+    left: 10px;
+    top: 97px;
+}
+
+#cta-small {
+    right: 10px;
+    bottom: 71px;
+    cursor: pointer;
+}
+
+#thumbs-container {
+    left: 10px;
+    top: 119px;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+}
+
+
+/*---------- ENDFRAME ----------*/
+
+#edadj {
+    top: 35px;
+    left: 91px;
+}
+
+#cta-large {
+    top: 128px;
+    left: 91px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#pnz-large {
+    bottom: 20px;
+    left: 58px;
+}

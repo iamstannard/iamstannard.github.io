@@ -1,0 +1,343 @@
+body,
+body * {
+    position: absolute;
+    outline: 0px;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-size: 10pt;
+}
+
+body {
+    margin: 50px;
+    padding: 0px;
+}
+
+#main-container {
+    width: 970px;
+    height: 250px;
+    background: #000;
+    border: 1px solid #a2a2a2;
+}
+
+#collapsed-content {
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    cursor: pointer;
+    background: #000;
+    display: none;
+    overflow: hidden;
+}
+
+#expanded-content {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 200;
+    display: none;
+    overflow: hidden;
+}
+
+
+/*
+#expanded-exit {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background: #000;
+    opacity: 0;
+}
+*/
+
+#expand-main {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background: #000;
+    opacity: 0;
+}
+
+.feature-collapsed {
+    width: 100%;
+    height: 100%;
+}
+
+.feature-expanded {
+    width: 100%;
+    height: 100%;
+}
+
+:focus {
+    outline: none;
+}
+
+::-moz-focus-inner {
+    border: 0;
+}
+
+
+/* --------------- STYLING --------------- */
+
+img,
+.mm,
+#bookmarkDivider,
+.jd,
+.thmb,
+#iconBases {
+    visibility: hidden;
+}
+
+#main-container {
+    visibility: visible;
+}
+
+
+/* --------------- COLLAPSED --------------- */
+
+#expandButton {
+    display: none;
+    cursor: pointer;
+}
+
+#close-button {
+    display: none;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0);
+    padding: 10px 10px;
+    top: 0px;
+    right: 0px;
+    z-index: 300;
+}
+
+#bg1,
+#bg2 {}
+
+#bookmarkBase,
+#expandButton {
+    right: 674px;
+}
+
+.loc,
+#bookmarkDivider,
+#pnzSmall {
+    left: 158px;
+}
+
+.loc {
+    top: 8px;
+}
+
+#bookmarkDivider {
+    height: 1px;
+    width: 125px;
+    background: #a2a2a2;
+    top: 40px;
+}
+
+#pnzSmall {
+    top: 49px;
+}
+
+#map {
+    top: 10px;
+    left: 117px;
+}
+
+.mm {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background: #e32651;
+    /*opacity: 0.8;*/
+}
+
+#mapMarker1 {
+    top: 38px;
+    left: 119px;
+}
+
+#mapMarker2 {
+    top: 41px;
+    left: 116px;
+}
+
+.hl {
+    top: 70px;
+    right: 666px;
+}
+
+#expandButton {
+    bottom: 10px;
+}
+
+
+/* --------------- EXPANDED --------------- */
+
+#collapseButton {
+    display: none;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0);
+    padding: 10px 10px;
+    top: 0px;
+    left: 0px;
+}
+
+#pnzLarge {
+    left: 38px;
+    top: 54px;
+}
+
+#icons {
+    left: 38px;
+    top: 141px;
+}
+
+.iconBase {
+    background-color: #ccc;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+}
+
+#icon1Base {}
+
+#icon2Base {
+    left: 52px;
+}
+
+#icon3Base {
+    left: 104px;
+}
+
+#mapLarge {
+    left: 32px;
+}
+
+#trails {
+    /*    opacity: 0.5;*/
+}
+
+#trail1 {
+    left: 127px;
+    top: 206px;
+}
+
+#trail2 {
+    left: 228px;
+    top: 36px;
+}
+
+#trail3 {
+    left: 127px;
+    top: 160px;
+}
+
+#trail4 {
+    left: 107px;
+    top: 206px;
+}
+
+#trail5 {
+    left: 49px;
+    top: 206px;
+}
+
+#btnCTA {
+    left: 247px;
+    top: 379px;
+    cursor: pointer;
+}
+
+#journeyHeader {
+    left: 508px;
+}
+
+#journeyContent,
+#thumbnails,
+#thumbnailTitles {
+    left: 425px;
+}
+
+.jd {
+    height: 1px;
+    background: #a2a2a2;
+}
+
+#journeyDivider1 {
+    top: 39px;
+    width: 422px;
+}
+
+#journeyDivider2 {
+    top: 185px;
+    width: 506px;
+}
+
+#journeyHeader {
+    top: 54px;
+}
+
+#journeyContent {
+    top: 109px;
+}
+
+#gallery {
+    top: 90px;
+}
+
+#chooseJourney {
+    top: 202px;
+}
+
+#thumbnails {
+    top: 349px;
+}
+
+#thumbnails div {
+    height: 137px;
+    width: 94px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+#thumbnail1 {
+    left: 0px;
+}
+
+#thumbnail2 {
+    left: 103px;
+}
+
+#thumbnail3 {
+    left: 206px;
+}
+
+#thumbnail4 {
+    left: 309px;
+}
+
+#thumbnail5 {
+    left: 412px;
+}
+
+#thumbnailImg1 {
+    left: 0px;
+}
+
+#thumbnailImg2 {
+    left: -100%;
+}
+
+#thumbnailImg3 {
+    left: -200%;
+}
+
+#thumbnailImg4 {
+    left: -300%;
+}
+
+#thumbnailImg5 {
+    left: -400%;
+}

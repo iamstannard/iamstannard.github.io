@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+  <meta charset="UTF-8">
+  <title></title>
+
+<script src="libs/easeljs-0.7.1.min.js"></script>
+  <script src="libs/tweenjs-0.5.1.min.js"></script>
+    <script src="libs/movieclip-0.7.1.min.js"></script>
+  <script src="libs/preloadjs-0.4.1.min.js"></script>
+
+  <!--CDN link for DoubleClick enabler-->
+  <script src='https://s0.2mdn.net/ads/studio/Enabler.js'></script>
+
+  <script type="text/javascript" src="300x250.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="300x250.css">
+
+  <script>
+    //Check Enabler is ready
+
+    function checkEnablerInit() {
+      console.log('checkEnablerInit');
+      if (Enabler.isInitialized()) {
+        enablerInit();
+      } else {
+        Enabler.addEventListener(studio.events.StudioEvent.INIT, enablerInit);
+      }
+    }
+
+    //Run when Enabler is ready
+
+    function enablerInit() {
+      console.log('enablerInit');
+      if (Enabler.isPageLoaded()) {
+        enablerPoliteInit();
+      } else {
+        Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, enablerPoliteInit);
+      }
+    }
+
+    function enablerPoliteInit() {
+      console.log('enablerPoliteInit');
+
+      //Load in CSS 
+
+      // var extCSS = document.createElement('link');
+      // extCSS.setAttribute("rel", "stylesheet");
+      // extCSS.setAttribute("type", "text/css");
+      // extCSS.setAttribute("href", Enabler.getUrl("300x250.css"));
+      // document.getElementsByTagName("head")[0].appendChild(extCSS);
+
+      //Load in Javascript
+
+      // var extJavascript = document.createElement('script');
+      // extJavascript.setAttribute('type', 'text/javascript');
+      // extJavascript.setAttribute('src', Enabler.getUrl('300x250.js'));
+      // document.getElementsByTagName('head')[0].appendChild(extJavascript);
+
+      startBanner();
+
+    }
+
+    // From Flash export
+
+    var canvas, stage, exportRoot;
+
+    function startBanner() {
+      console.log('startBanner');
+      canvas = document.getElementById("canvas");
+      images = images || {};
+
+      var loader = new createjs.LoadQueue(false);
+      loader.addEventListener("fileload", handleFileLoad);
+      loader.addEventListener("complete", handleComplete);
+      loader.loadManifest(lib.properties.manifest);
+
+      clickthrough = document.getElementById("clickthrough");
+      clickthrough.addEventListener('click', clickthroughHandler);
+
+    }
+
+    function clickthroughHandler(event) {
+      console.log('clickthroughHandler');
+      Enabler.exit('Exit');
+    }
+
+    function handleFileLoad(evt) {
+      console.log('handleFileLoad');
+      if (evt.item.type == "image") {
+        images[evt.item.id] = evt.result;
+      }
+    }
+
+    function handleComplete() {
+      console.log('handleComplete');
+      exportRoot = new lib._300x250();
+
+      stage = new createjs.Stage(canvas);
+      stage.addChild(exportRoot);
+      stage.update();
+      stage.enableMouseOver();
+
+      createjs.Ticker.setFPS(lib.properties.fps);
+      createjs.Ticker.addEventListener("tick", stage);
+    }
+  </script>
+
+</head>
+
+<body onload="checkEnablerInit()" style="background-color:#ffffff">
+  <div id="bannerContainer">
+    <canvas id="canvas" width="300" height="250"></canvas>
+    <div id="clickthrough"></div>
+  </div>
+</body>
+
+</html>

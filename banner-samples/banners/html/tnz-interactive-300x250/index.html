@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>TNZ SI Interactive MREC</title>
+
+    <meta charset="UTF-8">
+
+    <style type="text/css">
+        #bannerContainer {
+            display: none
+        }
+    </style>
+
+    <!-- DoubleClick Enabler -->
+    <script src='https://s0.2mdn.net/ads/studio/Enabler.js'></script>
+
+    <!-- TweenMax -->
+    <script type="text/javascript" src="libs/TweenMax.min.js"></script>
+
+    <script>
+        // Check Enabler is ready
+
+        function checkEnablerInit() {
+            console.log('checkEnablerInit');
+            if (Enabler.isInitialized()) {
+                enablerInit();
+            } else {
+                Enabler.addEventListener(studio.events.StudioEvent.INIT, enablerInit);
+            }
+        }
+
+        // Run when Enabler is ready
+
+        function enablerInit() {
+            console.log('enablerInit');
+            if (Enabler.isPageLoaded()) {
+                enablerPoliteInit();
+            } else {
+                Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, enablerPoliteInit);
+            }
+        }
+
+        function enablerPoliteInit() {
+            console.log('enablerPoliteInit');
+
+            // Load in CSS 
+
+            var extCSS = document.createElement('link');
+            extCSS.setAttribute('rel', 'stylesheet');
+            extCSS.setAttribute('type', 'text/css');
+            extCSS.setAttribute('href', Enabler.getUrl('style.css'));
+            document.getElementsByTagName('head')[0].appendChild(extCSS);
+
+            // Load in JS
+
+            var extJavascript = document.createElement('script');
+            extJavascript.setAttribute('type', 'text/javascript');
+            extJavascript.setAttribute('src', Enabler.getUrl('script.js'));
+            document.getElementsByTagName('head')[0].appendChild(extJavascript);
+
+        }
+    </script>
+
+</head>
+
+<body onload='checkEnablerInit()'>
+
+    <div id='bannerContainer'>
+       
+        <div id="bgimages-container">
+            <img id='bgimage1Left'>
+            <img id='bgimage1Right'>
+            <img id='bgimage2a' class='bgimageL'>
+            <img id='bgimage2b' class='bgimageR'>
+            <img id='bgimage3a' class='bgimageL'>
+            <img id='bgimage3b' class='bgimageR'>
+            <img id='bgimage3c' class='bgimageL'>
+            <img id='bgimage3d' class='bgimageR'>
+            <img id='journeybg1' class='bgimage'>
+            <img id='journeybg2' class='bgimage'>
+            <img id='journeybg3' class='bgimage'>
+            <img id='journeybg4' class='bgimage'>
+            <img id='journeybg5' class='bgimage'>
+            <img id='journeybg6' class='bgimage'>
+            <img id='journeybg7' class='bgimage'>
+            <img id='journeybg8' class='bgimage'>
+        </div>
+
+        <div id='black-overlay'></div>
+
+        <img id='headline1'>
+        <img id='text-choose'>
+        <img id='arrows'>
+
+        <!-- bookmark elements -->
+        <img id='bookmark-base'>
+        <img id='map'>
+        <div id='mapmarker-main' class='mapmarker'></div>
+        <img id='text-south-island' class='location'>
+        <div id='bookmark-divider'></div>
+        <img id='pnz-small'>
+
+        <!-- selected journey elements -->
+        <div id='title-container'>
+            <img id='title1'>
+            <img id='title2'>
+            <img id='title3'>
+            <img id='title4'>
+            <img id='title5'>
+        </div>
+        <img id='text-rollover'>
+        <div id='thumbs-container'>
+            <img id='thumbs'>
+        </div>
+
+        <!-- end frame elements -->
+        <img id='edadj'>
+        <img id='pnz-large'>
+
+        <div id='bgexit'></div>
+
+        <div id='mapmarker1' class='mapmarker'></div>
+        <div id='mapmarker2' class='mapmarker'></div>
+        <div id='mapmarker3' class='mapmarker'></div>
+
+        <img id='cta-small'>
+        <img id='cta-large'>
+
+        <div id='hotspot-left'></div>
+        <div id='hotspot-right'></div>
+
+    </div>
+
+</body>
+
+</html>

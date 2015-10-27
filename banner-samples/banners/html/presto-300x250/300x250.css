@@ -1,0 +1,30 @@
+#bannerContainer {
+    margin: 50px;
+    padding: 0px;
+    position: absolute;
+    background-color: #ffffff;
+    width: 300px;
+    height: 250px;
+    overflow: hidden;
+    left: 0px;
+    top: 0px;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: block;
+}
+
+#clickthrough {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    top: 0px;
+    left: 0px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #865191;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <title>MasterCard</title>
+
+    <meta charset='UTF-8'>
+
+    <style type='text/css'>
+        #bannerContainer {
+            display: none;
+        }
+    </style>
+
+    <link rel='stylesheet' type='text/css' href='style.css'>
+
+    <script type='text/javascript'>
+        // this url is overwritten in dcm
+        var clickTag = 'http://www.mastercard.com.au/';
+    </script>
+
+</head>
+
+<body>
+
+    <div id='bannerContainer'>
+
+        <div id='videoComposite'>
+            <div>
+                <img id='videoBackup' src='images/videoBackup.jpg'>
+            </div>
+            <div>
+                <video id='videoPlayer' poster='images/videoBackup.jpg'></video>
+            </div>
+        </div>
+
+        <div id='overlayDiv'>
+            <img id='copy1' src='images/copy1.png'>
+            <img id='product' src='images/product.png'>
+        </div>
+
+        <div id='blackOverlay'></div>
+
+        <img id='copy2' src='images/copy2.png'>
+        <img id='logo' src='images/logo.png'>
+        <img id='promoCode' src='images/promoCode.png'>
+
+        <img id='copy3' src='images/copy3.png'>
+        <img id='mcLogo' src='images/mcLogo.png'>
+        <img id='cta' src='images/cta.png'>
+        <div id='disclaimerEnd' class='disclaimer'>Conditions apply.</div>
+
+        <a href='javascript:window.open(window.clickTag)'>
+            <!-- empty div handles clickthroughs and adds 1px border -->
+            <div id='clickthrough'></div>
+        </a>
+
+    </div>
+
+    <script type='text/javascript' src='libs/TweenMax.min.js'></script>
+    <script type='text/javascript' src='libs/ModernizrCustom.js'></script>
+    <script src='script.js'></script>
+
+</body>
+
+</html>

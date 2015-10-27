@@ -1,0 +1,123 @@
+body {
+    margin: 50px;
+    padding: 0px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    text-size-adjust: none;
+    background: #fff;
+}
+
+img,
+div,
+video {
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    box-sizing: border-box;
+}
+
+#bannerContainer,
+#blackOverlay,
+#clickthrough {
+    width: 300px;
+    height: 250px;
+}
+
+#bannerContainer {
+    background-color: #000000;
+    display: block;
+    overflow: hidden;
+}
+
+#blackOverlay {
+    background: #1d1809;
+}
+
+#clickthrough {
+    background: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    border: 1px solid #1d1809;
+}
+
+
+/*---------- ELEMENTS ----------*/
+
+#videoComposite,
+#overlayDiv,
+#videoBackup,
+#videoPlayer {
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    height: 390px;
+}
+
+#copy1 {
+    left: 53px;
+    top: 64px;
+}
+
+#product {
+    left: 65px;
+    bottom: 26px;
+}
+
+#copy2 {
+    left: 76px;
+    top: 56px;
+}
+
+#logo {
+    left: 38px;
+    top: 119px;
+}
+
+#promoCode {
+    left: 78px;
+    top: 161px;
+}
+
+#copy3 {
+    top: 44px;
+    left: 62px;
+}
+
+#mcLogo {
+    top: 98px;
+    left: 110px;
+}
+
+#cta {
+    top: 168px;
+    left: 74px;
+}
+
+.disclaimer {
+    width: 100%;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 8px;
+    line-height: 8px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: #fff;
+}
+
+#disclaimerEnd {
+    bottom: 10px;
+    left: 0px;
+}
+
+#overlayDiv,
+#copy2,
+#logo,
+#promoCode,
+#copy3,
+#mcLogo,
+#cta,
+.disclaimer {
+    visibility: hidden;
+}
